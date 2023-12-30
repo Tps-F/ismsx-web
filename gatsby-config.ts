@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-postcss',
   ],
-  pathPrefix: '/gatsby-tailwindcss-githubpages',
+  pathPrefix: '/ismsx-web',
 }
 
 export default config
