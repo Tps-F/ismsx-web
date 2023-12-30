@@ -5,7 +5,21 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    colors: {
+      'primary': '#EF3352',
+      'secondary': '#FCE9D7',
+      'line': '#F1E2C3',
+      'about': '#35A4BC'
+    },
+    extend: {
+      fontFamily : {
+        caviardreams: 'CaviarDreams',
+        HeiseiKakuGothic: 'HeiseiKakuGothic'
+      },
+      spacing: {
+        '1': '1px' 
+      }
+    },
   },
   plugins: [],
 }
