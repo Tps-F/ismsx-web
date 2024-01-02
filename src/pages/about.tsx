@@ -1,10 +1,7 @@
-// CompetitiveAdvantage.js
-
 import React from 'react';
 import type { HeadFC, PageProps } from "gatsby";
 
-import aboutImage from "../images/about/about_4k.png";
-
+import { StaticImage } from 'gatsby-plugin-image';
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -12,12 +9,12 @@ const AboutPage: React.FC<PageProps> = () => {
       <div className=" min-h-screen bg-secondary py-6 sm:py-8 lg:py-12 font-caviardreams">
         <div className="mx-auto max-w-screen-md px-4 md:px-8 ">
           <br />
-          <h1 className="mb-4 text-5xl font-bold text-gray-800 sm:text-6xl md:mb-6 text-about">
+          <h1 className="mb-4 text-5xl font-bold text-about sm:text-6xl md:mb-6 ">
             about
           </h1>
           <br />
-          <div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
-              <img src={aboutImage} loading="lazy" alt="Photo by Minh Pham" className="h-full w-full object-cover object-center" />
+          <div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
+              <StaticImage src="../images/about/about_4k.png" loading="lazy" className="h-full w-full object-cover object-center" alt="about"></StaticImage>
           </div>
 
           <p className="mb-6 text-gray-500 sm:text-lg md:mb-8">

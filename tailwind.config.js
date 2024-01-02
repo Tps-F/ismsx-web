@@ -9,7 +9,8 @@ module.exports = {
       'primary': '#EF3352',
       'secondary': '#FCE9D7',
       'line': '#F1E2C3',
-      'about': '#35A4BC'
+      'about': '#35A4BC',
+      'works': '909326',
     },
     extend: {
       fontFamily : {
