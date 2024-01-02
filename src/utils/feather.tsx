@@ -1,8 +1,10 @@
 import React from 'react';
-import feather from 'feather-icons';
+import feather, { FeatherIcon as Icon, FeatherIconNames } from 'feather-icons';
+
+
 
 interface FeatherIconProps {
-  name: string;
+  name: keyof { [key in FeatherIconNames]: Icon };
   sizeArray: number[];
   fillColor?: string | null;
 }
