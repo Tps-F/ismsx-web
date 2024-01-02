@@ -13,7 +13,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="container max-w-screen-xl mx-auto px-4">
           <div className="text-center">
             <div className="flex justify-center w-50">
-              <img src={logo} alt="Logo"/>
+              <StaticImage src="../images/logo.png" alt="logo"></StaticImage>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <a href="#">{feather({name: 'instagram', sizeArray: [24, 24], fillColor: null})}</a>
             <a href="#">{feather({name: 'youtube', sizeArray: [24, 24], fillColor: null})}</a>
             <a href="#">{feather({name: 'mail', sizeArray: [24, 24], fillColor: null})}</a>
-            <a href="#"><StaticImage src="../images/ae.png" alt="work" className="w-6"></StaticImage></a>
+            <a href="#"><StaticImage src="../images/ae.png" alt="booth" className="w-6"></StaticImage></a>
           </div>
 
         </div>
