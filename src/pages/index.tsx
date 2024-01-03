@@ -6,7 +6,7 @@ import feather from "../utils/feather";
 const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<>
-			<div className="bg-primary pt-4 sm:pt-10 lg:pt-12 font-caviardreams">
+			<div className="min-h-screen bg-primary pt-4 sm:pt-10 lg:pt-12 font-caviardreams flex flex-col justify-center items-center">
 				<section className="">
 					<div className="container max-w-screen-xl mx-auto px-4">
 						<div className="text-center">
@@ -15,16 +15,17 @@ const IndexPage: React.FC<PageProps> = () => {
 									src="../images/logo.png"
 									loading="eager"
 									alt="logo"
+                  className="overflow-hidden"
 								/>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
+				<footer className="mx-auto max-w-screen-2xl px-4 md:px-8 fixed bottom-0 left-0 right-0 w-full">
 					<div className="flex flex-col items-center border-t border-dashed pt-6 text-secondary">
 						<br />
-						<div className="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-20 text-secondary">
+						<div className="mb-4 flex flex-wrap justify-center gap-x-10 gap-y-2 md:justify-start md:gap-20 text-secondary">
 							<a href="https://twitter.com/ismsx">
 								{feather({
 									name: "twitter",
@@ -53,7 +54,7 @@ const IndexPage: React.FC<PageProps> = () => {
 									fillColor: null,
 								})}
 							</a>
-							<a href="https://ismsx.booth.pm/">
+							<a href="">
 								<StaticImage
 									src="../images/ae.png"
 									alt="booth"
