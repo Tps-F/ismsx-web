@@ -1,11 +1,10 @@
 import type { HeadFC, PageProps } from "gatsby";
 import React from "react";
 
-import { StaticImage } from "gatsby-plugin-image";
 
-import aboutImage from "../images/about/about_4k.png";
+import WorksGrid from "../components/worksGrid";
 
-const CompetitiveAdvantage2 = () => {
+const WorksPage: React.FC<PageProps> = () => {
 	return (
 		<div className="min-h-screen bg-secondary py-6 sm:py-8 lg:py-12 font-caviardreams">
 			<div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -21,122 +20,11 @@ const CompetitiveAdvantage2 = () => {
 						Show more
 					</a>
 				</div>
-
-				<div className="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
-					<div>
-						<a
-							href="#"
-							className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-						>
-							<StaticImage
-								src="../images/works/1/1.jpg"
-								alt="work"
-								className="h-full w-full object-cover object-center transition duration-200"
-							/>
-						</a>
-
-						<div className="flex flex-col">
-							<span className="text-gray-500">2023.12</span>
-							<a
-								href="#"
-								className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-							>
-								富士フィルム「クリスマスプレゼントにチェキ！ TVCM モーション他
-							</a>
-						</div>
-					</div>
-					<div>
-						<a
-							href="#"
-							className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-						>
-							<StaticImage
-								src="../images/works/3.jpg"
-								alt="work"
-								className="h-full w-full object-cover object-center transition duration-200"
-							/>
-						</a>
-
-						<div className="flex flex-col">
-							<span className="text-gray-500">2023.12</span>
-							<a
-								href="#"
-								className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-							>
-								富士フィルム「クリスマスプレゼントにチェキ！ TVCM モーション他
-							</a>
-						</div>
-					</div>
-					<div>
-						<a
-							href="#"
-							className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-						>
-							<StaticImage
-								src="../images/works/1/1.jpg"
-								alt="work"
-								className="h-full w-full object-cover object-center transition duration-200"
-							/>
-						</a>
-
-						<div className="flex flex-col">
-							<span className="text-gray-500">2023.12</span>
-							<a
-								href="#"
-								className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-							>
-								富士フィルム「クリスマスプレゼントにチェキ！ TVCM モーション他
-							</a>
-						</div>
-					</div>
-					<div>
-						<a
-							href="#"
-							className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-						>
-							<StaticImage
-								src="../images/works/1/1.jpg"
-								alt="work"
-								className="h-full w-full object-cover object-center transition duration-200"
-							/>
-						</a>
-
-						<div className="flex flex-col">
-							<span className="text-gray-500">2023.12</span>
-							<a
-								href="#"
-								className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-							>
-								富士フィルム「クリスマスプレゼントにチェキ！ TVCM モーション他
-							</a>
-						</div>
-					</div>
-					<div>
-						<a
-							href="#"
-							className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-						>
-							<StaticImage
-								src="../images/works/1/1.jpg"
-								alt="work"
-								className="h-full w-full object-cover object-center transition duration-200"
-							/>
-						</a>
-
-						<div className="flex flex-col">
-							<span className="text-gray-500">2023.12</span>
-							<a
-								href="#"
-								className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-							>
-								富士フィルム「クリスマスプレゼントにチェキ！ TVCM モーション他
-							</a>
-						</div>
-					</div>
-				</div>
+				<WorksGrid />
 			</div>
 		</div>
 	);
 };
 
-export default CompetitiveAdvantage2;
+export default WorksPage;
+export const Head: HeadFC = () => <title>isshin — Works</title>;

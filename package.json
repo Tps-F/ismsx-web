@@ -17,6 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.2",
     "@types/feather-icons": "^4.29.2",
     "gatsby": "^5.13.1",
     "gatsby-plugin-image": "^3.13.0",
