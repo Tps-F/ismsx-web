@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
 									src="../images/logo.png"
 									loading="eager"
 									alt="logo"
-                  className="overflow-hidden"
+									className="overflow-hidden"
 								/>
 							</div>
 						</div>
