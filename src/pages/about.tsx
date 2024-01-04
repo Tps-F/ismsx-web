@@ -2,17 +2,23 @@ import type { HeadFC, PageProps } from "gatsby";
 import React from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
+import Header from "../components/header";
 
 const AboutPage: React.FC<PageProps> = () => {
 	return (
 		<>
-			<div className="min-h-screen bg-secondary py-6 sm:py-8 lg:py-12 font-caviardreams">
+			<div className="min-h-screen bg-secondary py-2 lg:py-2 font-caviardreams">
 				<div className="mx-auto max-w-screen-md px-4 md:px-8 ">
 					<br />
-					<h1 className="mb-4 text-5xl font-bold text-about sm:text-6xl md:mb-6 ">
-						about
-					</h1>
-					<br />
+					<div className="grid-cols-2 grid">
+						<h1 className="mb-4 text-5xl font-bold text-about sm:text-6xl md:mb-6 col-span-1 flex items-center">
+							about
+						</h1>
+						<div className="mb-6 flex items-end justify-between col-span-1">
+							<br />
+							<Header colors={[]} />
+						</div>
+					</div>
 					<div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
 						<StaticImage
 							src="../images/about/about_4k.png"
