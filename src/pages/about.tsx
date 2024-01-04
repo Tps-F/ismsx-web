@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const AboutPage: React.FC<PageProps> = () => {
 	return (
 		<>
-			<div className=" min-h-screen bg-secondary py-6 sm:py-8 lg:py-12 font-caviardreams">
+			<div className="min-h-screen bg-secondary py-6 sm:py-8 lg:py-12 font-caviardreams">
 				<div className="mx-auto max-w-screen-md px-4 md:px-8 ">
 					<br />
 					<h1 className="mb-4 text-5xl font-bold text-about sm:text-6xl md:mb-6 ">
