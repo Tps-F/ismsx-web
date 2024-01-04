@@ -2,11 +2,15 @@ import type { HeadFC, PageProps } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import feather from "../utils/feather";
+import Header from "../components/header";
 
 const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<>
 			<div className="min-h-screen bg-primary pt-4 sm:pt-10 lg:pt-12 font-caviardreams flex flex-col justify-center items-center">
+				<div className="mx-auto max-w-screen-2xl px-4 md:px-8 fixed top-10 left-0 right-0 w-full">
+					<Header colors={["text-secondary", "text-secondary", "text-secondary"]} />
+				</div>
 				<section className="">
 					<div className="container max-w-screen-xl mx-auto px-4">
 						<div className="text-center">
