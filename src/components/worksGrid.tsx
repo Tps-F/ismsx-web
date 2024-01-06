@@ -62,7 +62,10 @@ const WorksGrid = () => {
 				))}
 			</div>
 			{selectedWork && (
-				<div onClick={closeOverlay} className="fixed top-8 left-0 w-full h-full bg-secondary py-2 lg:py-2 font-caviardreams">
+				<div
+					onClick={closeOverlay}
+					className="fixed top-8 left-0 w-full h-full bg-secondary py-2 lg:py-2 font-caviardreams"
+				>
 					<div className="mx-auto max-w-screen-lg px-4 md:px-8 ">
 						<br />
 						<div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
@@ -79,10 +82,10 @@ const WorksGrid = () => {
 									{selectedWork.date}
 								</span>
 								<h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
-									<a href={selectedWork.url} >{selectedWork.name}</a>
+									<a href={selectedWork.url}>{selectedWork.name}</a>
 								</h2>
 							</div>
-							
+
 							{/**
 							 * 後で考えるらしいから保留
 							<div className="mt-10 md:mt-16 lg:mt-20">
@@ -98,10 +101,8 @@ const WorksGrid = () => {
 						</div>
 					</div>
 				</div>
-		)}
-
+			)}
 		</div>
-		
 	);
 };
 
