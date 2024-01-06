@@ -46,13 +46,13 @@ const WorksGrid = () => {
 								alt={work.name}
 								className="h-full w-full object-cover object-center transition duration-200"
 							/>
-							<span className="hover:backdrop-brightness-90 absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white opacity-0 transition-opacity duration-200 hover:opacity-100 p-4">
-								<span className="text-primary">
+							<span className="hover:backdrop-brightness-50 absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white opacity-0 transition-opacity duration-200 hover:opacity-100 p-4">
+								<span className="text-secondary">
 									{work.date.split("-").slice(0, 2).join("-")}
 								</span>
 								<a
 									href={work.url}
-									className="text-lg font-bold text-primary transition duration-100 hover:text-gray-500 lg:text-xl"
+									className="text-lg text-secondary transition duration-100 hover:text-gray-500 lg:text-xl"
 								>
 									{work.name}
 								</a>
@@ -81,7 +81,7 @@ const WorksGrid = () => {
 								<span className="mb-0.5 inline-block text-gray-500">
 									{selectedWork.date}
 								</span>
-								<h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
+								<h2 className="text-xl font-bold text-gray-800 lg:text-2xl">
 									<a href={selectedWork.url}>{selectedWork.name}</a>
 								</h2>
 							</div>
