@@ -4,6 +4,7 @@ import { sortByDate } from "../utils/sort";
 
 const WorksGrid = () => {
 	const [works, setWorks] = useState<any[]>([]);
+	const [selectedWork, setSelectedWork] = useState<any | null>(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -19,35 +20,118 @@ const WorksGrid = () => {
 		fetchData();
 	}, []);
 
-	return (
-		<div className="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4 ">
-			{works.map((work) => (
-				<div key={work.id}>
-					<a
-						href={work.url}
-						className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
-					>
-						<img
-							src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${work.image[0]}`}
-							alt={work.name}
-							className="h-full w-full object-cover object-center transition duration-200"
-						/>
-					</a>
+	const handleImageClick = (work: any) => {
+		setSelectedWork(work);
+	};
 
-					<div className="flex flex-col">
-						<span className="text-gray-500">
-							{work.date.split("-").slice(0, 2).join("-")}
-						</span>
-						<a
-							href={work.url}
-							className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
+	const closeOverlay = () => {
+		setSelectedWork(null);
+	};
+
+	return (
+		<div>
+			<div
+				className={`grid sm:grid-cols-2 lg:grid-cols-3 ${
+					selectedWork ? "opacity-10 pointer-events-none" : ""
+				}`}
+			>
+				{works.map((work) => (
+					<div key={work.id} className="relative">
+						<div
+							onClick={() => handleImageClick(work)}
+							className="group block w-full overflow-hidden bg-gray-100 relative"
 						>
-							{work.name}
-						</a>
+							<img
+								src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${work.image[0]}`}
+								alt={work.name}
+								className="h-full w-full object-cover object-center transition duration-200"
+							/>
+							<span className="hover:backdrop-brightness-90 absolute top-0 left-0 right-0 bottom-0 flex flex-col text-white opacity-0 transition-opacity duration-200 hover:opacity-100 p-4">
+								<span className="text-primary">
+									{work.date.split("-").slice(0, 2).join("-")}
+								</span>
+								<a
+									href={work.url}
+									className="text-lg font-bold text-primary transition duration-100 hover:text-gray-500 lg:text-xl"
+								>
+									{work.name}
+								</a>
+							</span>
+						</div>
+					</div>
+				))}
+			</div>
+			{selectedWork && (
+				<div
+					className="fixed min-h-screen inset-0 py-6 flex justify-center bg-secondary bg-opacity-90"
+					onClick={closeOverlay}
+				>
+					<div className="bg-white p-8 rounded-md relative z-10">
+						<div className="bg-white py-6 sm:py-8 lg:py-12">
+							<div className="mx-auto max-w-screen-lg px-4 md:px-8">
+								<div className="grid gap-8 md:grid-cols-2">
+									<div className="space-y-4">
+										<div className="relative overflow-hidden rounded-lg bg-gray-100">
+											<img
+												src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
+												loading="lazy"
+												alt="detail1"
+												className="h-full w-full object-cover object-center"
+											/>
+										</div>
+
+										<div className="grid grid-cols-2 gap-4">
+											<div className="overflow-hidden rounded-lg bg-gray-100">
+												<img
+													src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
+													loading="lazy"
+													alt="detail2"
+													className="h-full w-full object-cover object-center"
+												/>
+											</div>
+
+											<div className="overflow-hidden rounded-lg bg-gray-100">
+												<img
+													src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
+													loading="lazy"
+													alt="detail3"
+													className="h-full w-full object-cover object-center"
+												/>
+											</div>
+										</div>
+									</div>
+
+									<div className="md:py-8">
+										<div className="mb-2 md:mb-3">
+											<span className="mb-0.5 inline-block text-gray-500">
+												{selectedWork.date}
+											</span>
+											<h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
+												{selectedWork.name}
+											</h2>
+										</div>
+
+
+
+										<div className="mt-10 md:mt-16 lg:mt-20">
+											<div className="mb-3 text-lg font-semibold text-gray-800">
+												Description
+											</div>
+
+											<p className="text-gray-500">
+												一応用意した<br/><br/>あああああああああ
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			))}
+			)}
+
 		</div>
+		
 	);
 };
 
