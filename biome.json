@@ -11,7 +11,8 @@
 				"noDangerouslySetInnerHtml": "off"
 			},
 			"a11y": {
-				"useValidAnchor": "off"
+				"useValidAnchor": "off",
+				"useKeyWithClickEvents": "off"
 			}
 		}
 	}
