@@ -4,25 +4,34 @@ import * as React from "react";
 import feather from "../utils/feather";
 import Header from "../components/header";
 
-import logo_beige from "../images/logo_beige.gif"
-import logo_red from "../images/logo_red.gif"
-import booth from "../images/ae.png"
+import logo_beige from "../images/logo_beige.gif";
+import logo_red from "../images/logo_red.gif";
+import booth from "../images/ae.png";
 
 const IndexPage: React.FC<PageProps> = () => {
-
-	const colorTheme =  Math.random() < 0.5;
+	const colorTheme = Math.random() < 0.5;
 	return (
 		<>
-			<div className={`min-h-screen ${colorTheme ? "bg-primary": "bg-secondary"} pt-4 sm:pt-10 lg:pt-12 font-caviardreams flex flex-col justify-center items-center`}>
+			<div
+				className={`min-h-screen ${
+					colorTheme ? "bg-primary" : "bg-secondary"
+				} pt-4 sm:pt-10 lg:pt-12 font-caviardreams flex flex-col justify-center items-center`}
+			>
 				<div className="mx-auto max-w-screen-2xl px-4 md:px-8 fixed top-10 left-0 right-0 w-full z-50">
-					<Header colors={colorTheme ? ["text-secondary", "text-secondary", "text-secondary"]: ["text-primary", "text-primary", "text-primary"]} />
+					<Header
+						colors={
+							colorTheme
+								? ["text-secondary", "text-secondary", "text-secondary"]
+								: ["text-primary", "text-primary", "text-primary"]
+						}
+					/>
 				</div>
 				<section className="">
 					<div className="container max-w-screen-xl mx-auto lg:px-40 md:px-20 ">
 						<div className="text-center">
 							<div className="flex justify-center w-50">
 								<img
-									src={colorTheme ? logo_beige: logo_red}
+									src={colorTheme ? logo_beige : logo_red}
 									loading="eager"
 									alt="logo"
 									className="overflow-hidden"
@@ -35,7 +44,11 @@ const IndexPage: React.FC<PageProps> = () => {
 				<footer className="mx-auto max-w-screen-2xl px-4 md:px-8 fixed bottom-0 left-0 right-0 w-full">
 					<div className="flex flex-col items-center border-t border-dashed pt-6 text-secondary">
 						<br />
-						<div className={`mb-4 flex flex-wrap justify-center gap-x-10 gap-y-2 md:justify-start md:gap-20 ${colorTheme ? "text-secondary": "text-primary"}`}>
+						<div
+							className={`mb-4 flex flex-wrap justify-center gap-x-10 gap-y-2 md:justify-start md:gap-20 ${
+								colorTheme ? "text-secondary" : "text-primary"
+							}`}
+						>
 							<a href="https://twitter.com/ismsx" target="blank">
 								{feather({
 									name: "twitter",
@@ -65,11 +78,7 @@ const IndexPage: React.FC<PageProps> = () => {
 								})}
 							</a>
 							<a href="https://ismsx.booth.pm/" target="blank">
-								<img
-									src={booth}
-									alt="booth"
-									className="w-6"
-								/>
+								<img src={booth} alt="booth" className="w-6" />
 							</a>
 						</div>
 					</div>

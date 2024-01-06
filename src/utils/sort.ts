@@ -1,5 +1,5 @@
 interface Work {
-  date: string;
+	date: string;
 }
 
 export const sortByDate = (a: Work, b: Work) => {
