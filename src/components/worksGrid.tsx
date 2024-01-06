@@ -62,73 +62,43 @@ const WorksGrid = () => {
 				))}
 			</div>
 			{selectedWork && (
-				<div
-					className="fixed min-h-screen inset-0 py-6 flex justify-center bg-secondary bg-opacity-90"
-					onClick={closeOverlay}
-				>
-					<div className="bg-white p-8 rounded-md relative z-10">
-						<div className="bg-white py-6 sm:py-8 lg:py-12">
-							<div className="mx-auto max-w-screen-lg px-4 md:px-8">
-								<div className="grid gap-8 md:grid-cols-2">
-									<div className="space-y-4">
-										<div className="relative overflow-hidden rounded-lg bg-gray-100">
-											<img
-												src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
-												loading="lazy"
-												alt="detail1"
-												className="h-full w-full object-cover object-center"
-											/>
-										</div>
-
-										<div className="grid grid-cols-2 gap-4">
-											<div className="overflow-hidden rounded-lg bg-gray-100">
-												<img
-													src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
-													loading="lazy"
-													alt="detail2"
-													className="h-full w-full object-cover object-center"
-												/>
-											</div>
-
-											<div className="overflow-hidden rounded-lg bg-gray-100">
-												<img
-													src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
-													loading="lazy"
-													alt="detail3"
-													className="h-full w-full object-cover object-center"
-												/>
-											</div>
-										</div>
-									</div>
-
-									<div className="md:py-8">
-										<div className="mb-2 md:mb-3">
-											<span className="mb-0.5 inline-block text-gray-500">
-												{selectedWork.date}
-											</span>
-											<h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
-												{selectedWork.name}
-											</h2>
-										</div>
-
-
-
-										<div className="mt-10 md:mt-16 lg:mt-20">
-											<div className="mb-3 text-lg font-semibold text-gray-800">
-												Description
-											</div>
-
-											<p className="text-gray-500">
-												一応用意した<br/><br/>あああああああああ
-											</p>
-										</div>
-									</div>
-								</div>
+				<div onClick={closeOverlay} className="fixed top-8 left-0 w-full h-full bg-secondary py-2 lg:py-2 font-caviardreams">
+					<div className="mx-auto max-w-screen-lg px-4 md:px-8 ">
+						<br />
+						<div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
+							<img
+								src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
+								loading="lazy"
+								className="h-full w-full object-cover object-center"
+								alt="about"
+							/>
+						</div>
+						<div className="md:py-8">
+							<div className="mb-2 md:mb-3">
+								<span className="mb-0.5 inline-block text-gray-500">
+									{selectedWork.date}
+								</span>
+								<h2 className="text-2xl font-bold text-gray-800 lg:text-3xl">
+									<a href={selectedWork.url} >{selectedWork.name}</a>
+								</h2>
 							</div>
+							
+							{/**
+							 * 後で考えるらしいから保留
+							<div className="mt-10 md:mt-16 lg:mt-20">
+								<div className="mb-3 text-lg font-semibold text-gray-800">
+									Description
+								</div>
+
+								<p className="text-gray-500">
+									一応用意した<br/><br/>あああああああああ
+								</p>
+							</div>
+							 */}
 						</div>
 					</div>
 				</div>
-			)}
+		)}
 
 		</div>
 		
