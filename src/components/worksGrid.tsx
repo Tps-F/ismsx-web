@@ -39,7 +39,7 @@ const WorksGrid = () => {
 					<div key={work.id} className="relative">
 						<div
 							onClick={() => handleImageClick(work)}
-							className="group block w-full overflow-hidden bg-gray-100 relative"
+							className="group block w-full overflow-hidden bg-gray-100 relative aspect-video"
 						>
 							<img
 								src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${work.image[0]}`}
