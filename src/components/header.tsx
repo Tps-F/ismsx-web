@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation } from "@reach/router";
-
 interface HeaderProps {
 	colors?: string[];
 }
