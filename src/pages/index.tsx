@@ -1,8 +1,8 @@
 import type { HeadFC, PageProps } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import feather from "../utils/feather";
 import Header from "../components/header";
+import { useEffect } from "react";
 
 import logo_beige from "../images/logo_beige.gif";
 import logo_red from "../images/logo_red.gif";
@@ -10,6 +10,19 @@ import booth from "../images/ae.png";
 
 const IndexPage: React.FC<PageProps> = () => {
 	const colorTheme = Math.random() < 0.5;
+
+	const callback = (event: Event) => {
+		event.preventDefault();
+	};
+
+	useEffect(() => {
+		document.addEventListener("touchmove", callback, { passive: false }); 
+
+		return () => {
+			document.removeEventListener("touchmove", callback, { capture: false });
+		};
+	}, [callback]);
+
 	return (
 		<>
 			<div
@@ -26,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
 						}
 					/>
 				</div>
-				<section className="">
+				<section>
 					<div className="container max-w-screen-xl mx-auto lg:px-40 md:px-20 ">
 						<div className="text-center">
 							<div className="flex justify-center w-50">
