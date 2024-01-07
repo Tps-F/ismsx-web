@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "@reach/router";
+import { Link } from "gatsby";
 interface HeaderProps {
 	colors?: string[];
 }
@@ -14,14 +15,24 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 						colors[0] || "text-works"
 					} text-right text-xl`}
 				>
-					<a href="works">works</a>
+					<Link
+						to={location === "" ? "works" : "/works"}
+						className="text-blue-500 hover:text-blue-700"
+					>
+						works
+					</Link>
 				</div>
 				<div
 					className={`mb-4 tracking-widest ${
 						colors[1] || "text-about"
 					} text-right text-xl`}
 				>
-					<a href="about">about</a>
+					<Link
+						to={location === "" ? "about" : "/about"}
+						className="text-blue-500 hover:text-blue-700"
+					>
+						about
+					</Link>
 				</div>
 				<div
 					className={`mb-4 tracking-widest ${
