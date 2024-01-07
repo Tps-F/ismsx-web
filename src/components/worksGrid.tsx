@@ -5,6 +5,7 @@ import { sortByDate } from "../utils/sort";
 const WorksGrid = () => {
 	const [works, setWorks] = useState<any[]>([]);
 	const [selectedWork, setSelectedWork] = useState<any | null>(null);
+	const [visibleWorks, setVisibleWorks] = useState<number>(12);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -18,6 +19,23 @@ const WorksGrid = () => {
 		};
 
 		fetchData();
+	}, []);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (
+				window.innerHeight + document.documentElement.scrollTop ===
+				document.documentElement.offsetHeight
+			) {
+				setVisibleWorks((prevVisibleWorks) => prevVisibleWorks + 12);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	const handleImageClick = (work: any) => {
@@ -35,7 +53,7 @@ const WorksGrid = () => {
 					selectedWork ? "opacity-10 pointer-events-none" : ""
 				}`}
 			>
-				{works.map((work) => (
+				{works.slice(0, visibleWorks).map((work) => (
 					<div key={work.id} className="relative">
 						<div
 							onClick={() => handleImageClick(work)}
