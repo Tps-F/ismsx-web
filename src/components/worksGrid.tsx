@@ -60,7 +60,7 @@ const WorksGrid = () => {
 							className="group block w-full overflow-hidden bg-gray-100 relative aspect-video"
 						>
 							<img
-								src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${work.image[0]}`}
+								src={`/${work.image[0]}.avif`}
 								alt={work.name}
 								className="h-full w-full object-cover object-center transition duration-200"
 							/>
