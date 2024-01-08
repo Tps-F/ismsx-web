@@ -91,67 +91,160 @@ const AboutPage: React.FC<PageProps> = () => {
 
 					<ul className="mb-6 space-y-4 list-inside text-gray-500 text-base sm:text-lg md:mb-8">
 						<li className="text-base ">
-							2023/12　富士フィルム「クリスマスプレゼントにチェキ！」TVCM モーション
+							2023/12　富士フィルム「クリスマスプレゼントにチェキ！」TVCM
+							モーション
 						</li>
-						<li className="text-base ">2023/10　「en Live Art Performance」一部演出</li>
-						<li className="text-base ">2023/10　Adobe「MAX Challenge 2023」参考作品</li>
+						<li className="text-base ">
+							2023/10　「en Live Art Performance」一部演出
+						</li>
+						<li className="text-base ">
+							2023/10　Adobe「MAX Challenge 2023」参考作品
+						</li>
 						<li className="text-base ">
 							2023/09　富士フィルム 「ワクワクがリンクする。INSTAX Pal」TVCM
 							モーション
 						</li>
-						<li className="text-base ">2023/09　株式会社ベストセキュリティ ロゴモーション</li>
+						<li className="text-base ">
+							2023/09　株式会社ベストセキュリティ ロゴモーション
+						</li>
 						<li className="text-base ">2023/08 「学び×楽しい 岩崎学園」PV</li>
-						<li className="text-base ">2023/06 「ap bank fes ’23 」ロゴモーション</li>
-						<li className="text-base ">2023/06　新R25チャンネル「気持ち良い仕事睡眠大全」OP</li>
-						<li className="text-base ">2023/05　DNP「BLUEPRINT STUDIO」"ONE KEY FOR EVERYTHING"</li>
-						<li className="text-base ">2023/04　株式会社うるる「ULU-Fes 2023」OP</li>
-						<li className="text-base ">2023/01　日本テレビ「夜明け前のPLAYERS」OP</li>
-						<li className="text-base ">2022/12　スペースシャワーTVプラス OP等</li>
-						<li className="text-base ">2022/11　スマ留 「サクッと留学しよ。」PV</li>
+						<li className="text-base ">
+							2023/06 「ap bank fes ’23 」ロゴモーション
+						</li>
+						<li className="text-base ">
+							2023/06　新R25チャンネル「気持ち良い仕事睡眠大全」OP
+						</li>
+						<li className="text-base ">
+							2023/05　DNP「BLUEPRINT STUDIO」"ONE KEY FOR EVERYTHING"
+						</li>
+						<li className="text-base ">
+							2023/04　株式会社うるる「ULU-Fes 2023」OP
+						</li>
+						<li className="text-base ">
+							2023/01　日本テレビ「夜明け前のPLAYERS」OP
+						</li>
+						<li className="text-base ">
+							2022/12　スペースシャワーTVプラス OP等
+						</li>
+						<li className="text-base ">
+							2022/11　スマ留 「サクッと留学しよ。」PV
+						</li>
 						<li className="text-base ">2022/07　地域航空会社 「feel air」PV</li>
-						<li className="text-base ">2022/05　MECRE 「60秒でわかるMECRE」PV</li>
-						<li className="text-base ">2022/04　株式会社うるる「ULU-Fes 2022」OP</li>
-						<li className="text-base ">2022/03　「SQUARE ENIX MUSIC Channel」 OP等</li>
-						<li className="text-base ">2021/10　Twitter 「ブランドセーフティ」PV</li>
-						<li className="text-base ">2021/10　株式会社うるる「ULURU Synapse Award 2021」OP</li>
-						<li className="text-base ">2021/08　Microsoft 「Surface 4者面談」 OP他モーション</li>
-						<li className="text-base ">2021/07　「ﾐｭｰｼﾞｯｸﾚｲﾝｵｰﾃﾞｨｼｮﾝﾌﾟﾛｼﾞｪｸﾄ」 SPOT</li>
-						<li className="text-base ">2021/06　日立建機日本 ZX350LCK-6機能説明動画 一部演出</li>
-						<li className="text-base ">2021/06　GooglePlay 「Play On Challenge」 一部演出</li>
-						<li className="text-base ">2021/04　株式会社うるる「ULU-Fes 2021」OP</li>
-						<li className="text-base ">2021/03　KONAMI eFootballチャンネル OP・ED等</li>
-						<li className="text-base ">2021/02　株式会社SUPER STUDIO 「ecforce」ロゴモーション</li>
-						<li className="text-base ">2021/01　鳥取ガス「enetopia」TVCM 2カット</li>
-						<li className="text-base ">2021/01　株式会社リチカ サイトトップ映像　</li>
-						<li className="text-base ">2020/12　MUSIC ON! TV「legato 〜旅する音楽スタジオ〜」OP</li>
-						<li className="text-base ">2020/12　NHK みんなのうた「100年時代」アニメOP</li>
-						<li className="text-base ">2020/11　NewsPicksLIVE 「Westship」 PV / OP</li>
-						<li className="text-base ">2020/11　J:COMショップ吉祥寺店 サイネージ広告</li>
-						<li className="text-base ">2020/09　ヤマトグループ 「Yamato DX Night #1」 OP</li>
-						<li className="text-base ">2020/09　千葉ジェッツ 「10周年記念プロジェクト」 PV</li>
-						<li className="text-base ">2020/07　ポルカドットスティングレイ「FREE」 一部演出</li>
-						<li className="text-base ">2020/04　株式会社LABOT 「SHAKYO.io」 PV</li>
-						<li className="text-base ">2020/02　NHKスペシャル 「令和未来会議」OP</li>
-						<li className="text-base ">2020/01　justInCase株式会社 「わりかん保険」　PV</li>
-						<li className="text-base ">2019/11　YouTubeチャンネル 「STARDY」 　ロゴデザイン・PV</li>
-						<li className="text-base ">2019/09　ソニーミュージック「 One in a Billion」 　SPOT</li>
-						<li className="text-base ">2019/09　「THE BINARY」 　ライブ演出映像(一部)</li>
-						<li className="text-base ">2019/07　ASMR動画アプリ 「toremoro」 PV</li>
-						<li className="text-base ">2019/05　カクテルメイク株式会社 「RICHKA」 PV</li>
-						<li className="text-base ">2018/12　YouTubeチャンネル 「常春」 OP</li>
-						<li className="text-base ">2018/11　YouTubeチャンネル 「もやモヤちゃんねる」 OP</li>
-						<li className="text-base ">2018/10　「HoneyComeBear」　 ロゴモーション</li>
-						<li className="text-base ">2018/09　クリエイター交流イベント 「I/O」　 PV</li>
-						<li className="text-base ">2018/09　「ESPOIR表参道」　ロゴモーション</li>
+						<li className="text-base ">
+							2022/05　MECRE 「60秒でわかるMECRE」PV
+						</li>
+						<li className="text-base ">
+							2022/04　株式会社うるる「ULU-Fes 2022」OP
+						</li>
+						<li className="text-base ">
+							2022/03　「SQUARE ENIX MUSIC Channel」 OP等
+						</li>
+						<li className="text-base ">
+							2021/10　Twitter 「ブランドセーフティ」PV
+						</li>
+						<li className="text-base ">
+							2021/10　株式会社うるる「ULURU Synapse Award 2021」OP
+						</li>
+						<li className="text-base ">
+							2021/08　Microsoft 「Surface 4者面談」 OP他モーション
+						</li>
+						<li className="text-base ">
+							2021/07　「ﾐｭｰｼﾞｯｸﾚｲﾝｵｰﾃﾞｨｼｮﾝﾌﾟﾛｼﾞｪｸﾄ」 SPOT
+						</li>
+						<li className="text-base ">
+							2021/06　日立建機日本 ZX350LCK-6機能説明動画 一部演出
+						</li>
+						<li className="text-base ">
+							2021/06　GooglePlay 「Play On Challenge」 一部演出
+						</li>
+						<li className="text-base ">
+							2021/04　株式会社うるる「ULU-Fes 2021」OP
+						</li>
+						<li className="text-base ">
+							2021/03　KONAMI eFootballチャンネル OP・ED等
+						</li>
+						<li className="text-base ">
+							2021/02　株式会社SUPER STUDIO 「ecforce」ロゴモーション
+						</li>
+						<li className="text-base ">
+							2021/01　鳥取ガス「enetopia」TVCM 2カット
+						</li>
+						<li className="text-base ">
+							2021/01　株式会社リチカ サイトトップ映像　
+						</li>
+						<li className="text-base ">
+							2020/12　MUSIC ON! TV「legato 〜旅する音楽スタジオ〜」OP
+						</li>
+						<li className="text-base ">
+							2020/12　NHK みんなのうた「100年時代」アニメOP
+						</li>
+						<li className="text-base ">
+							2020/11　NewsPicksLIVE 「Westship」 PV / OP
+						</li>
+						<li className="text-base ">
+							2020/11　J:COMショップ吉祥寺店 サイネージ広告
+						</li>
+						<li className="text-base ">
+							2020/09　ヤマトグループ 「Yamato DX Night #1」 OP
+						</li>
+						<li className="text-base ">
+							2020/09　千葉ジェッツ 「10周年記念プロジェクト」 PV
+						</li>
+						<li className="text-base ">
+							2020/07　ポルカドットスティングレイ「FREE」 一部演出
+						</li>
+						<li className="text-base ">
+							2020/04　株式会社LABOT 「SHAKYO.io」 PV
+						</li>
+						<li className="text-base ">
+							2020/02　NHKスペシャル 「令和未来会議」OP
+						</li>
+						<li className="text-base ">
+							2020/01　justInCase株式会社 「わりかん保険」　PV
+						</li>
+						<li className="text-base ">
+							2019/11　YouTubeチャンネル 「STARDY」 　ロゴデザイン・PV
+						</li>
+						<li className="text-base ">
+							2019/09　ソニーミュージック「 One in a Billion」 　SPOT
+						</li>
+						<li className="text-base ">
+							2019/09　「THE BINARY」 　ライブ演出映像(一部)
+						</li>
+						<li className="text-base ">
+							2019/07　ASMR動画アプリ 「toremoro」 PV
+						</li>
+						<li className="text-base ">
+							2019/05　カクテルメイク株式会社 「RICHKA」 PV
+						</li>
+						<li className="text-base ">
+							2018/12　YouTubeチャンネル 「常春」 OP
+						</li>
+						<li className="text-base ">
+							2018/11　YouTubeチャンネル 「もやモヤちゃんねる」 OP
+						</li>
+						<li className="text-base ">
+							2018/10　「HoneyComeBear」　 ロゴモーション
+						</li>
+						<li className="text-base ">
+							2018/09　クリエイター交流イベント 「I/O」　 PV
+						</li>
+						<li className="text-base ">
+							2018/09　「ESPOIR表参道」　ロゴモーション
+						</li>
 
-						<br/>
-						<br/>
+						<br />
+						<br />
 						<li className="text-primary">LECTURES </li>
-						<li className="text-base ">2021〜　bisen 北海道芸術デザイン専門学校にて特別講義</li>
-						<li className="text-base ">2021/06　放送芸術学院専門学校にて特別講義</li>
+						<li className="text-base ">
+							2021〜　bisen 北海道芸術デザイン専門学校にて特別講義
+						</li>
+						<li className="text-base ">
+							2021/06　放送芸術学院専門学校にて特別講義
+						</li>
 
-						<br/>
-						<br/>
+						<br />
+						<br />
 						<li className="text-primary">SELF PRODUCED </li>
 						<li className="text-base ">2024/01　？？？？？</li>
 						<li className="text-base ">2023/10　"モーフィグレーション"</li>
@@ -186,7 +279,9 @@ const AboutPage: React.FC<PageProps> = () => {
 						<li className="text-base ">2020/03　"Haptico"　</li>
 						<li className="text-base ">2020/02　"Anote"　</li>
 						<li className="text-base ">2020/02　"shift”　</li>
-						<li className="text-base ">2020/01　"アンノジョウオソイアケオメ”　</li>
+						<li className="text-base ">
+							2020/01　"アンノジョウオソイアケオメ”　
+						</li>
 						<li className="text-base ">2020/01　"Isshin REEL 2020"　</li>
 						<li className="text-base ">2019/12　"Carei 19"</li>
 						<li className="text-base ">2019/12　"Platrap"</li>
@@ -211,7 +306,9 @@ const AboutPage: React.FC<PageProps> = () => {
 						<li className="text-base ">2018/04　"PYON?“</li>
 						<li className="text-base ">2018/03　"connext!“</li>
 						<li className="text-base ">2018/02　"テスト死亡”</li>
-						<li className="text-base ">2018/02　"ROTATION" (EOMゲスト枠制作)</li>
+						<li className="text-base ">
+							2018/02　"ROTATION" (EOMゲスト枠制作)
+						</li>
 						<li className="text-base ">2018/01　"ISMSX REEL 2018"</li>
 						<li className="text-base ">2018/01　"2K+18"</li>
 						<li className="text-base ">2017/12　"LIMOV"</li>
@@ -235,8 +332,12 @@ const AboutPage: React.FC<PageProps> = () => {
 						<li className="text-base ">2016/05　"Hope will come true”</li>
 						<li className="text-base ">2016/05　"雷ーCAT ムービー ALONE18"</li>
 						<li className="text-base ">2016/04　"Let’s start.“</li>
-						<li className="text-base ">2016/02　"The 3-D’s last day.”　卒業ムービー制作　</li>
-						<li className="text-base ">2015/07　"Love the warz Real intention？”</li>
+						<li className="text-base ">
+							2016/02　"The 3-D’s last day.”　卒業ムービー制作　
+						</li>
+						<li className="text-base ">
+							2015/07　"Love the warz Real intention？”
+						</li>
 						<li className="text-base ">2015/05　ゆず 「表裏一体」PV</li>
 						<li className="text-base ">2015/04　"Graphic Ri2"</li>
 						<li className="text-base ">2015/04　"Graphic Ri"</li>

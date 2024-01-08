@@ -12,8 +12,8 @@ const WorksGrid = () => {
 			try {
 				const { getWorks } = database();
 				const data = await getWorks();
-				setWorks(data.sort(sortByDate).sort(sortByPin))
-				console.log(data)
+				setWorks(data.sort(sortByDate).sort(sortByPin));
+				console.log(data);
 			} catch (error) {
 				console.error("Error fetching works:", (error as Error).message);
 			}

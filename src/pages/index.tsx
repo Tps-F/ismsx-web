@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 import logo_beige from "../images/logo_beige.gif";
 import logo_red from "../images/logo_red.gif";
-import booth_beige from "../images/ae_beige.png"
+import booth_beige from "../images/ae_beige.png";
 import booth_red from "../images/ae_red.png";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -92,7 +92,11 @@ const IndexPage: React.FC<PageProps> = () => {
 								})}
 							</a>
 							<a href="https://ismsx.booth.pm/" target="blank">
-								<img src={colorTheme ? booth_beige : booth_red} alt="booth" className="w-6" />
+								<img
+									src={colorTheme ? booth_beige : booth_red}
+									alt="booth"
+									className="w-6"
+								/>
 							</a>
 						</div>
 					</div>

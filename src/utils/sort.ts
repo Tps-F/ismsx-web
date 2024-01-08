@@ -1,6 +1,6 @@
 interface Work {
 	date: string;
-	pin: boolean
+	pin: boolean;
 }
 
 export const sortByDate = (a: Work, b: Work) => {
@@ -8,5 +8,5 @@ export const sortByDate = (a: Work, b: Work) => {
 };
 
 export const sortByPin = (a: Work, b: Work) => {
-	return (a.pin === b.pin) ? 0 : a.pin ? -1 : 1
-}
+	return a.pin === b.pin ? 0 : a.pin ? -1 : 1;
+};
