@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 				>
 					<Link
 						to={location === "" ? "works" : "/works"}
-						className={`${location === "works" ? "bg-textbg" : ""}`}
+						className={`${location.includes("works") ? "bg-textbg" : ""}`}
 					>
 						works
 					</Link>
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 				>
 					<Link
 						to={location === "" ? "about" : "/about"}
-						className={`${location === "about" ? "bg-textbg" : ""}`}
+						className={`${location.includes("about") ? "bg-textbg" : ""}`}
 					>
 						about
 					</Link>

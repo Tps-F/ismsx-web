@@ -70,6 +70,7 @@ const WorksGrid = () => {
 									{work.date.split("-").slice(0, 2).join("-")}
 								</span>
 								<a
+									target="blank"
 									href={work.url}
 									className="text-lg text-secondary transition duration-100 hover:text-gray-500 lg:text-xl"
 								>
