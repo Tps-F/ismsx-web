@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { database } from "../utils/database";
-import { sortByDate } from "../utils/sort";
+import { sortByDate, sortByPin } from "../utils/sort";
 
 const WorksGrid = () => {
 	const [works, setWorks] = useState<any[]>([]);
@@ -12,7 +12,8 @@ const WorksGrid = () => {
 			try {
 				const { getWorks } = database();
 				const data = await getWorks();
-				setWorks(data.sort(sortByDate));
+				setWorks(data.sort(sortByDate).sort(sortByPin))
+				console.log(data)
 			} catch (error) {
 				console.error("Error fetching works:", (error as Error).message);
 			}
@@ -60,7 +61,7 @@ const WorksGrid = () => {
 							className="group block w-full overflow-hidden bg-gray-100 relative aspect-video"
 						>
 							<img
-								src={`/${work.image[0]}.avif`}
+								src={`/ismsx-web/${work.image[0]}.avif`}
 								alt={work.name}
 								className="h-full w-full object-cover object-center transition duration-200"
 							/>
@@ -88,7 +89,7 @@ const WorksGrid = () => {
 						<br />
 						<div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
 							<img
-								src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${selectedWork.image[0]}`}
+								src={`/ismsx-web/${selectedWork.image[0]}.avif`}
 								loading="lazy"
 								className="h-full w-full object-cover object-center"
 								alt="about"
