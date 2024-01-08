@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
 	};
 
 	useEffect(() => {
-		document.addEventListener("touchmove", callback, { passive: false }); 
+		document.addEventListener("touchmove", callback, { passive: false });
 
 		return () => {
 			document.removeEventListener("touchmove", callback, { capture: false });

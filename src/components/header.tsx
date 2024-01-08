@@ -17,11 +17,12 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 				>
 					<Link
 						to={location === "" ? "works" : "/works"}
-						className="text-blue-500 hover:text-blue-700"
+						className={`${location === "works" ? "bg-textbg" : ""}`}
 					>
 						works
 					</Link>
 				</div>
+
 				<div
 					className={`mb-4 tracking-widest ${
 						colors[1] || "text-about"
@@ -29,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 				>
 					<Link
 						to={location === "" ? "about" : "/about"}
-						className="text-blue-500 hover:text-blue-700"
+						className={`${location === "about" ? "bg-textbg" : ""}`}
 					>
 						about
 					</Link>
