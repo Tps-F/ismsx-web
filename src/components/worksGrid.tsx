@@ -61,7 +61,9 @@ const WorksGrid = () => {
 							className="group block w-full overflow-hidden bg-gray-100 relative aspect-video"
 						>
 							<img
-								src={`${process.env.BUILD_STAGE !== `develop` ?  "/ismsx-web" : ""} /${work.image[0]}.avif`}
+								src={`${
+									process.env.BUILD_STAGE !== "develop" ? "/ismsx-web" : ""
+								} /${work.image[0]}.avif`}
 								alt={work.name}
 								className="h-full w-full object-cover object-center transition duration-200"
 							/>
@@ -90,7 +92,9 @@ const WorksGrid = () => {
 						<br />
 						<div className="relative mb-6 overflow-hidden rounded-lg bg-gray-100 md:mb-8">
 							<img
-								src={`${process.env.BUILD_STAGE !== `develop` ?  "/ismsx-web" : ""} /${selectedWork.image[0]}.avif`}
+								src={`${
+									process.env.BUILD_STAGE !== "develop" ? "/ismsx-web" : ""
+								} /${selectedWork.image[0]}.avif`}
 								loading="lazy"
 								className="h-full w-full object-cover object-center"
 								alt="about"
