@@ -17,9 +17,12 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 				>
 					<Link
 						to={location === "" ? "works" : "/works"}
-						className={`${location.includes("works") ? "bg-textbg" : ""}`}
+						
 					>
-						works
+						<div className="relative">
+							<div className={`${location.includes("works") ? "bg-textbg" : ""} w-[57.5px] h-[14px] absolute top-[7px] left-[31px]`}/>
+							<p className="relative">works</p>
+						</div>
 					</Link>
 				</div>
 
@@ -32,7 +35,10 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 						to={location === "" ? "about" : "/about"}
 						className={`${location.includes("about") ? "bg-textbg" : ""}`}
 					>
-						about
+						<div className="relative">
+							<div className={`${location.includes("about") ? "bg-textbg" : ""} w-[65px] h-[15.8px] absolute top-[5.2px] left-[23.24px]`}/>
+							<p className="relative">about</p>
+						</div>
 					</Link>
 				</div>
 				<div
