@@ -28,7 +28,7 @@ const WorksGrid = () => {
 						className="group mb-2 block w-full overflow-hidden rounded-lg bg-gray-100"
 					>
 						<img
-							src={`${process.env.GATSBY_SUPABASE_PROJECT_URL}/storage/v1/object/public/${work.image[0]}`}
+							src={`${process.env.BUILD_STAGE !== `develop` ?  "/ismsx-web" : ""} /${work.image[0]}.avif`}
 							alt={work.name}
 							className="h-full w-full object-cover object-center transition duration-200"
 						/>
