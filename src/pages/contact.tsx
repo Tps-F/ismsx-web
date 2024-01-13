@@ -1,10 +1,11 @@
 import type { HeadFC, PageProps } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 
 import { StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 
 const ContactPage: React.FC<PageProps> = () => {
+	const [submitted, setSubmitted] = useState(Boolean);
 	return (
 		<>
 			<div className="min-h-screen bg-secondary py-2 lg:py-2 font-caviardreams">
@@ -57,16 +58,16 @@ const ContactPage: React.FC<PageProps> = () => {
 					<br />
 					<form
 						className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
-						onSubmit={() => {
-							console.log("aaa");
-						}}
+						action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKZM6pn2yYzUnS4YFGEZh0US45NCnIKWIRDHAizz84bnTMGA/formResponse"
+						method="POST"
+						onSubmit={() => setSubmitted(true)}
 					>
 						<div className="sm:col-span-2">
 							<label className="mb-2 inline-block text-sm text-gray-800 sm:text-base">
 								会社名/団体名
 							</label>
 							<input
-								name="workName"
+								name="entry.186240590"
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -75,7 +76,7 @@ const ContactPage: React.FC<PageProps> = () => {
 								お名前*
 							</label>
 							<input
-								name="workName"
+								name="entry.325005267"
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -84,7 +85,7 @@ const ContactPage: React.FC<PageProps> = () => {
 								メールアドレス*
 							</label>
 							<input
-								name="workName"
+								name="entry.487465057"
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -93,7 +94,7 @@ const ContactPage: React.FC<PageProps> = () => {
 								件名*
 							</label>
 							<input
-								name="workName"
+								name="entry.1759148641"
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -103,7 +104,7 @@ const ContactPage: React.FC<PageProps> = () => {
 								本文*
 							</label>
 							<textarea
-								name="description"
+								name="entry.428642830"
 								className="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -117,6 +118,23 @@ const ContactPage: React.FC<PageProps> = () => {
 							</button>
 						</div>
 					</form>
+					{!submitted && (
+						<div className="fixed top-20 left-0  w-full h-full bg-secondary py-6 sm:py-8 lg:py-12">
+							<div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+								<div className="flex flex-col items-center">
+									<div className="max-w-md text-center lg:text-lg">
+										お問い合わせ頂きありがとうございます。
+										<br />
+										通常の場合、3日以内を目安に 【ismsx.jp@gmail.com】 より
+										返信させて頂きます。
+										<br />
+										内容によって請負いたしかねる場合等は返信出来ない場合も
+										ございますので、予めご了承ください。
+									</div>
+								</div>
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</>
