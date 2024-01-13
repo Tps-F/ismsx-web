@@ -11,7 +11,8 @@ module.exports = {
       line: '#F1E2C3',
       about: '#35A4BC',
       works: '#909326',
-      textbg: "#F9D0AA"
+      textbg: "#F9D0AA",
+      contacttextbg: "#eed1b4"
     },
     extend: {
       fontFamily : {
