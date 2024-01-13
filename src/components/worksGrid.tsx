@@ -63,7 +63,7 @@ const WorksGrid = () => {
 							<img
 								src={`${
 									process.env.BUILD_STAGE !== "develop" ? "/ismsx-web" : ""
-								} /${work.image[0]}.avif`}
+								}/${work.image[0]}.avif`}
 								alt={work.name}
 								className="h-full w-full object-cover object-center transition duration-200"
 							/>
@@ -94,7 +94,7 @@ const WorksGrid = () => {
 							<img
 								src={`${
 									process.env.BUILD_STAGE !== "develop" ? "/ismsx-web" : ""
-								} /${selectedWork.image[0]}.avif`}
+								}/${selectedWork.image[0]}.avif`}
 								loading="lazy"
 								className="h-full w-full object-cover object-center"
 								alt="about"
