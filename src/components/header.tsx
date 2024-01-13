@@ -51,7 +51,16 @@ const Header: React.FC<HeaderProps> = ({ colors = [] }) => {
 						colors[2] || "text-primary"
 					} text-right text-xl`}
 				>
-					<a>contact</a>
+					<Link to={location === "" ? "contact" : "/contact"}>
+						<div className="relative">
+							<div
+								className={`${
+									location.includes("contact") ? "bg-textbg" : ""
+								} w-[87.3px] h-[14px] absolute top-[7px] left-[1px]`}
+							/>
+							<p className="relative">contact</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</>
