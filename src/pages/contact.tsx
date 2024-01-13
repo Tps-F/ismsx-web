@@ -1,11 +1,26 @@
 import type { HeadFC, PageProps } from "gatsby";
 import React, { useState } from "react";
+import * as z from "zod";
 
 import { StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 
 const ContactPage: React.FC<PageProps> = () => {
 	const [submitted, setSubmitted] = useState(Boolean);
+	const [isValidEmail, setIsValidEmail] = useState(true);
+	const emailSchema = z.string().email();
+	const handleEmailChange = (event) => {
+		const newEmail = event.target.value;
+	  
+		setIsValidEmail((() => {
+		  try {
+			emailSchema.parse(newEmail);
+			return true;
+		  } catch (error) {
+			return false;
+		  }
+		})());
+	  };
 	return (
 		<>
 			<div className="min-h-screen bg-secondary py-2 lg:py-2 font-caviardreams">
@@ -60,6 +75,7 @@ const ContactPage: React.FC<PageProps> = () => {
 						className="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2"
 						action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKZM6pn2yYzUnS4YFGEZh0US45NCnIKWIRDHAizz84bnTMGA/formResponse"
 						method="POST"
+						target="hidden-iframe"
 						onSubmit={() => setSubmitted(true)}
 					>
 						<div className="sm:col-span-2">
@@ -77,6 +93,7 @@ const ContactPage: React.FC<PageProps> = () => {
 							</label>
 							<input
 								name="entry.325005267"
+								required
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -86,8 +103,12 @@ const ContactPage: React.FC<PageProps> = () => {
 							</label>
 							<input
 								name="entry.487465057"
+								type="email"
+								required
+								onChange={handleEmailChange}
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
+							{!isValidEmail && <span className="text-primary">emailが間違っています</span>}
 						</div>
 						<div className="sm:col-span-2">
 							<label className="mb-2 inline-block text-sm text-gray-800 sm:text-base">
@@ -95,6 +116,7 @@ const ContactPage: React.FC<PageProps> = () => {
 							</label>
 							<input
 								name="entry.1759148641"
+								required
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -105,6 +127,7 @@ const ContactPage: React.FC<PageProps> = () => {
 							</label>
 							<textarea
 								name="entry.428642830"
+								required
 								className="h-64 w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
 						</div>
@@ -135,6 +158,7 @@ const ContactPage: React.FC<PageProps> = () => {
 							</div>
 						</div>
 					)}
+					<iframe name="hidden-iframe" title="fake" className="hidden" />
 				</div>
 			</div>
 		</>
