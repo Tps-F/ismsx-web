@@ -11,16 +11,18 @@ const ContactPage: React.FC<PageProps> = () => {
 	const emailSchema = z.string().email();
 	const handleEmailChange = (event) => {
 		const newEmail = event.target.value;
-	  
-		setIsValidEmail((() => {
-		  try {
-			emailSchema.parse(newEmail);
-			return true;
-		  } catch (error) {
-			return false;
-		  }
-		})());
-	  };
+
+		setIsValidEmail(
+			(() => {
+				try {
+					emailSchema.parse(newEmail);
+					return true;
+				} catch (error) {
+					return false;
+				}
+			})(),
+		);
+	};
 	return (
 		<>
 			<div className="min-h-screen bg-secondary py-2 lg:py-2 font-caviardreams">
@@ -108,7 +110,9 @@ const ContactPage: React.FC<PageProps> = () => {
 								onChange={handleEmailChange}
 								className="w-full rounded border px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring"
 							/>
-							{!isValidEmail && <span className="text-primary">emailが間違っています</span>}
+							{!isValidEmail && (
+								<span className="text-primary">入力形式が正しくありません</span>
+							)}
 						</div>
 						<div className="sm:col-span-2">
 							<label className="mb-2 inline-block text-sm text-gray-800 sm:text-base">
@@ -142,7 +146,7 @@ const ContactPage: React.FC<PageProps> = () => {
 						</div>
 					</form>
 					{submitted && (
-						<div className="fixed top-20 left-0  w-full h-full bg-secondary py-6 sm:py-8 lg:py-12">
+						<div className="fixed top-0 left-0  w-full h-full bg-secondary py-6 sm:py-8 lg:py-12">
 							<div className="mx-auto max-w-screen-2xl px-4 md:px-8">
 								<div className="flex flex-col items-center">
 									<div className="max-w-md text-center lg:text-lg">
