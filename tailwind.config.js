@@ -25,12 +25,4 @@ module.exports = {
     },
   },
   plugins: [],
-  module: {
-    rules: [
-      {
-        test: /\.(node)$/,
-        use: 'raw-loader'
-      }
-    ]
-  },
 }

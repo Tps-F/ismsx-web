@@ -1,5 +1,4 @@
 import { supabase } from "./supabase";
-import { handleImage } from "./handleImage"
 
 interface addWorkProps {
 	workName: string;
@@ -33,15 +32,12 @@ export const database = () => {
 
 			const uploadData: any[] | null = [];
 			const uploadPromises = images.map(async (image, index) => {
-				/*
 				const { data, error } = await supabase.storage
 					.from("assets")
 					.upload(`works/${folder_name}/${index}`, image);
 				if (error) {
 					throw new Error(`Error uploading image: ${error.message}`);
 				}
-				 */
-				handleImage(image, folder_name, index)
 				uploadData.push(data);
 			});
 
